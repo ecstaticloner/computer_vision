@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+    <div class="container">
+        <h1>Update Member</h1>
+        <form action="{% url 'updateRecord' item.id %}" method="post">
+            {% csrf_token %}
+            <label for="">Serial No:</label><br><br>
+            <input type="text" name="first" value="{{item.firstname}}"><br><br>
+            <label for="">Item Name</label><br><br>
+            <input type="text" name="last" value="{{item.lastname}}"><br><br>
+            <label for="">Description</label><br><br>
+            <input type="text" name="country" value="{{item.country}}"><br><br>
+            <button type="submit" id="new1">Update</button>
+        </form>
+
+    </div>
+</body>
+</html>
